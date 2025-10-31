@@ -17,7 +17,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    background: wheat;
+    background: rgb(76, 145, 182);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -38,7 +38,7 @@ body {
     flex-direction: row;
     text-align: center;
     padding: 1rem;
-    background-color: rgb(13, 8, 41);
+    background-color: #0d203a;
 }
 
 .logo {
@@ -99,7 +99,7 @@ body {
     width: min(900, 95%);
     margin: 1.5rem;
     padding: 1.5rem;
-    box-shadow: 0 5px 10px rgb(223, 166, 166);
+    box-shadow: 0 5px 10px rgb(131, 125, 125);
     border: black;
 }
 
@@ -136,7 +136,10 @@ body {
 }
 
 /* Celdas con bordes y relleno */
-.tabla td,
+.tabla td {
+    border: 1px solid ;
+    padding: 10px;
+}
 .tabla th {
     border: 1px solid white;
     padding: 10px;
@@ -144,7 +147,7 @@ body {
 
 /* Cabecera de la tabla */
 .tabla th {
-    background: rgb(141, 78, 78);
+    background: #0d203a;
     color: white;
     text-align: center;
 }
@@ -155,6 +158,29 @@ body {
     white-space: nowrap;
 }
 
+
+/*Datos Formulario*/
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.datos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+} 
+
+button {
+    width: auto;
+    padding: 5px;
+}
+
+label {
+    padding: 5px;
+}
+
 /* =========================================================
    PIE DE PÁGINA
    ---------------------------------------------------------
@@ -163,8 +189,11 @@ body {
 
 .pie {
     text-align: center;
-    padding: 1rem;
+    padding: 3px;
+    font-size: 15px;
     background-color: rgb(211, 202, 202);
     margin: 20px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
 }

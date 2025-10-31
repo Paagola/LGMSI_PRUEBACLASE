@@ -81,29 +81,40 @@
         </section>
         <section class="tarjeta">
             <form name="busqueda" action="buscar.html" method="get">
+                <div class="datos">
                 <label for="busqueda">Buscar Juego: </label>
                 <input type="search" name="busqueda" id="busqueda"
-                placeholder="Titulo" required> 
+                placeholder="Titulo" required>
+            </div>
+                
                 <button type="submit">Busca</button>
             </form>
         </section> 
         <section class="tarjeta">
             <h2>Registro de usuario</h2>
             <form name="register"action="registro.html" method="post" >
+
+                <div class="datos">
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="nombre" id="nombre" placeholder="Introduce nombre" required>
-                
+                </div>
 
+                <div class="datos">
                 <label for="clave">Contraseña: </label>
-                <input type="password" name="pass" id="clave" minlength="6"
+                <input type="password" name="pass" id="clave" minlength="6" placeholder="Introduce Contraseña"
                 maxlength="12" required>
+                </div>
 
+                <div class="datos">
                 <label for="edad">Edad: </label>
                 <input type="number" name="age" id="edad" placeholder="Introduce edad"
                 pattern="[0-9]+">
+                </div>
 
+                <div class="datos">
                 <label for="dni">DNI: </label>
                 <input type="text" name="id" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
+                </div>
 
                 <button type="submit">Busca</button>
             </form>
