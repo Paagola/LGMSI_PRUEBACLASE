@@ -1,0 +1,170 @@
+/* =========================================================
+   ESTILOS BASE
+   ---------------------------------------------------------
+   Configuración inicial mínima y estructura general
+   ========================================================= */
+
+   * {
+    box-sizing: border-box; /* Garantiza que el padding y el borde no aumenten el tamaño total del elemento */
+}
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura disponible */
+}
+
+/* El body se convierte en contenedor flexible, dispuesto en columnas y ocupa todo el alto de la ventana */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background: wheat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Empuja el footer hacia abajo */
+}
+
+/* =========================================================
+   CABECERA
+   ---------------------------------------------------------
+   Estructura del encabezado y menú principal
+   ========================================================= */
+
+.cabecera {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa el logo del menú */
+    flex-direction: row;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(13, 8, 41);
+}
+
+.logo {
+    height: 100px;
+    width: auto; /* Mantiene proporción */
+}
+
+/* .titulo {
+    margin: 0;
+    color: red;
+} */
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN
+   ---------------------------------------------------------
+   Diseño del menú horizontal con estilo limpio y responsivo
+   ========================================================= */
+
+.menu {
+    list-style: none;      /* Elimina viñetas */
+    display: flex;         /* Coloca los enlaces en fila */
+    gap: 1rem;             /* Espaciado uniforme entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo básico de los enlaces del menú */
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.3s ease; /* Transición suave en el hover */
+}
+
+/* Pseudo elemento al pasar el cursor */
+.menu a:hover {
+    color: #E74C3C;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ---------------------------------------------------------
+   Zona central adaptable con tarjetas y secciones
+   ========================================================= */
+
+#contenido_principal {
+    flex-grow: 1;  /* Permite que crezca y empuje al footer */
+    padding: 1rem;
+}
+
+/* Tarjeta con sombra y bordes redondeados */
+.tarjeta {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: min(900, 95%);
+    margin: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 5px 10px rgb(223, 166, 166);
+    border: black;
+}
+
+/* =========================================================
+   LISTAS
+   ---------------------------------------------------------
+   Layout simple en varias columnas
+   ========================================================= */
+
+.listas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las listas bajen de línea si no caben */
+    gap: 2rem;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin: 0.25rem 0;
+}
+
+/* =========================================================
+   TABLAS
+   ---------------------------------------------------------
+   Diseño limpio con colores diferenciados para encabezado
+   ========================================================= */
+
+.tabla {
+    width: 100%;             /* Ocupa todo el ancho */
+    border-collapse: collapse; /* Une los bordes */
+    margin-top: 1rem;
+}
+
+/* Celdas con bordes y relleno */
+.tabla td,
+.tabla th {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+/* Cabecera de la tabla */
+.tabla th {
+    background: rgb(141, 78, 78);
+    color: white;
+    text-align: center;
+}
+
+/* Celdas del cuerpo */
+.tabla td {
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   PIE DE PÁGINA
+   ---------------------------------------------------------
+   Estilo limpio y centrado
+   ========================================================= */
+
+.pie {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(211, 202, 202);
+    margin: 20px;
+    border-radius: 10px;
+}

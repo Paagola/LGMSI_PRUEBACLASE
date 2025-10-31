@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desciprion" content="Página web de videojuegos">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img class="logo" src="img/gamezone-logo.png" alt="alt text logo">
+           
+        </div>
+        <nav>
+            <ul class="menu">
+                <ul><a href="a">Inicio</a></ul>
+                <ul><a href="a">Noticias</a></ul>
+                <ul><a href="a">Guias</a></ul>
+                <ul><a href="a">Contactos</a></ul>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main id=" contenido_principal">
+        <section class="intro tarjeta">
+            <h2>Bienvenido a GameZone</h2>
+            <p>Portal de ejemplo para HTML y CSS</p>
+        </section>
+
+        <section class="listas-y-tabla tarjeta">
+                <div class="listas">
+                    <div>
+                        <h3>Características (ul)</h3>
+                        <ul class="lista">
+                            <li>Análisis semanal</li>
+                            <li>Guias paso a paso</li>
+                            <li>Comunidad activa</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Primeros pasos</h3>
+                        <ol class="lista">
+                            <li>Elige tu género favorito</li>
+                            <li>Explora la galería</li>
+                            <li>Lee las guías</li>
+                            <li>Comparte tu opinión</li>
+                        </ol>
+                    </div>
+                </div>
+                <h3>Top ventas</h3>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Juego</th>
+                            <th>Plataforma</th>
+                            <th>Unidades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Racing Challengue</td>
+                            <td>PC</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>Magic dbsef</td>
+                            <td>PS</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>City Builder</td>
+                            <td>Switch</td>
+                            <td>81</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+        <section class="tarjeta">
+            <form name="busqueda" action="buscar.html" method="get">
+                <label for="busqueda">Buscar Juego: </label>
+                <input type="search" name="busqueda" id="busqueda"
+                placeholder="Titulo" required> 
+                <button type="submit">Busca</button>
+            </form>
+        </section> 
+        <section class="tarjeta">
+            <h2>Registro de usuario</h2>
+            <form name="register"action="registro.html" method="post" >
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Introduce nombre" required>
+                
+
+                <label for="clave">Contraseña: </label>
+                <input type="password" name="pass" id="clave" minlength="6"
+                maxlength="12" required>
+
+                <label for="edad">Edad: </label>
+                <input type="number" name="age" id="edad" placeholder="Introduce edad"
+                pattern="[0-9]+">
+
+                <label for="dni">DNI: </label>
+                <input type="text" name="id" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
+
+                <button type="submit">Busca</button>
+            </form>
+        </section>
+    </main>
+    <footer class="pie">
+        <p>&copy;2025 Todos los derechos reservados</p>
+    </footer>  
+</body>
+</html>
