@@ -18,7 +18,7 @@
                 <ul><a href="a">Inicio</a></ul>
                 <ul><a href="a">Noticias</a></ul>
                 <ul><a href="a">Guias</a></ul>
-                <ul><a href="a">Contactos</a></ul>
+                <ul><a href="#hey">Contactos</a></ul>
             </ul>
         </nav>
     </header>
@@ -95,30 +95,89 @@
             <form name="register"action="registro.html" method="post" >
 
                 <div class="datos">
-                <label for="nombre">Nombre: </label>
+                <label for="nombre">Nombre: 
                 <input type="text" name="nombre" id="nombre" placeholder="Introduce nombre" required>
-                </div>
+                </label>
 
-                <div class="datos">
-                <label for="clave">Contraseña: </label>
+                
+                <label for="clave">Contraseña: 
                 <input type="password" name="pass" id="clave" minlength="6" placeholder="Introduce Contraseña"
                 maxlength="12" required>
-                </div>
+                </label>
 
-                <div class="datos">
-                <label for="edad">Edad: </label>
+                
+                <label for="edad">Edad: 
                 <input type="number" name="age" id="edad" placeholder="Introduce edad"
                 pattern="[0-9]+">
-                </div>
+                </label>
 
-                <div class="datos">
-                <label for="dni">DNI: </label>
-                <input type="text" name="id" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
-                </div>
+                
+                <label for="dni">DNI: 
+                <input type="text" name="id" id="dni" pattern="([X-Zx-z]|[0-9])[0-9]{7}[A-Za-z]" required>
+                </label>
+                
 
                 <button type="submit">Busca</button>
+            </div>
             </form>
         </section>
+        <section class="tarjeta">
+            <form name="contacto" action="contacto.php" method="post" autocomplete="off">
+                <!--Lista desplegable-->
+                <label for="categoria">Categoría de juego: </label>
+                <select name="categoria" id="categoria" autofocus>
+                    <option selected disabled>-Selecciona categoria-</option>
+                    <option value="rol">Rol</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="deportes">Deportes</option>
+                </select>
+
+                <!--Radio y checkox-->
+                <p>Plataforma</p>
+                <label for="">
+                    <input type="radio" name="plataforma" id="plataforma" value="pc" required>
+                    PC
+                </label>
+                <label for="">
+                    <input type="radio" name="plataforma" id="plataforma" value="ps">
+                    PS5
+                </label>
+                <p>Subscribirse a noticia</p>
+                <label><input type="checkbox" name="supscripcion" checked>Sí</label>
+
+                <!--hidden se utiliza para enviar datos no visibles para el usuario-->
+                <input type="hidden" name="producto-id" value="1234">
+                <!--Botones-->
+                <input type="submit" value="Contactar">
+            </form>
+        </section>
+
+        <section id="hey" class="tarjeta">
+            <h2>Contacto</h2>
+
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <form name="form-contacto" action="formulario-contacto.php">
+                    <div class="datos">
+                    <label for="">Email: 
+                        <input type="email" name="form-contacto" id="form-contacto" placeholder="nombre@ejemplo.com">
+                    </label>
+                    <label for="">Numero 
+                        <input type="number" name="form-contacto" id="form-contacto" placeholder="Telefono">
+                    </label>
+                    <label for="">Sexo<br>
+                        <input type="radio" name="form-contacto" id="form-contacto" placeholder="" required>Femenino
+                        <input type="radio" name="form-contacto" id="form-contacto" placeholder="">Masculino
+                        <input type="radio" name="form-contacto" id="form-contacto" placeholder="">Porfavor y mucho
+                    </label>
+                    <label for="">Comentario
+                        <input type="text" name="form-contacto" id="form-contacto" placeholder="Introduce email">
+                    </label>
+                    </div>
+                </fieldset>
+                </form>
+        </section>
+
     </main>
     <footer class="pie">
         <p>&copy;2025 Todos los derechos reservados</p>
