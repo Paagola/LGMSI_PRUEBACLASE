@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="contacto" content="formulario-contacto">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario contacto</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img class="logo" src="img/gamezone-logo.png" alt="alt text logo">
+           
+        </div>
+        <nav>
+            <ul class="menu">
+                <ul><a href="index.html">Inicio</a></ul>
+                <ul><a href="a">Noticias</a></ul>
+                <ul><a href="a">Guias</a></ul>
+                <ul><a href="a">Contactos</a></ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido_principal">
+        <section id="hey" class="tarjeta">
+            <h2>Contacto</h2>
+
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <form name="form-contacto" action="formulario-contacto.php">
+                    <div class="datos">
+                    <label for="">Email: 
+                        <input type="email" name="form-contacto" id="form-contacto" placeholder="nombre@ejemplo.com">
+                    </label>
+                    <label for="">Numero 
+                        <input type="number" name="form-contacto" id="form-contacto" placeholder="Telefono">
+                    </label>
+                    <label for="">Sexo<br>
+                        <input type="radio" name="form-contacto" id="form-contacto" placeholder="" required>Femenino
+                        <input type="radio" name="form-contacto" id="form-contacto" placeholder="">Masculino
+                        <input type="radio" name="form-contacto" id="form-contacto" placeholder="">Porfavor y mucho
+                    </label>
+                    <label for="">Comentario
+                        <input type="text" name="form-contacto" id="form-contacto" placeholder="Introduce email">
+                    </label>
+                    </div>
+                </fieldset>
+                </form>
+        </section>
+    </main>
+    <footer class="pie">
+        <p>&copy;2025 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
